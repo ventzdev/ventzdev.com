@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% block titre%}À PROPOS{%endblock%}
+{%block caption%}À PROPOS{%endblock%}
+{%block contenu%}
+{% load static %}
+<div id="about-me">
+    {%for about in about%}
+    <div class="left">
+        <img src="{{about.img.url}}" alt="">
+    </div>
+    <div class="right">
+        
+        <h2>À propos de moi</h2>
+        <p class="about">{{about.apropos}}</p>
+        <div class="footer_profile">
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            </ul>
+        </div>
+       
+    </div>
+    {%endfor%}
+</div>
+
+{%endblock%}

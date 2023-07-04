@@ -1,0 +1,118 @@
+{%extends 'base.html'%}
+{%block titre%}Mon CV{%endblock%}
+{%block caption%}VOIR MON CV{%endblock%}
+{%block contenu%}
+{% load static%}
+
+<div class="container" id="cv">
+    <div class="flex">
+        <img class="rounded-circle" src="{% static 'images/baky.png'%}" alt="">
+        <div class="detay">
+            <h1>Marceille Eventz</h1>
+            <h5>sepacialite Developpement-Web</h5>
+        </div>
+    </div>
+    <h1 id="personnel">Information Personnel</h1>
+    <div class="flexInfos">
+        <div class="infos">
+            <h4>Moi</h4>
+            <div class="info">
+                <div class="iteminfo">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    <small>Developpement-Web</small>
+                </div>
+
+                <div class="iteminfo">
+                    <i class="fa fa-map-marker" aria-hidden="true"> </i>
+                    <small>&ensp;Cap-Haitien , HAITI</small>
+                </div>
+
+                <div class="iteminfo">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <small>eventzmarceille190@gmail.com</small>
+                </div>
+                <div class="iteminfo">
+                    <i class="fa fa-mobile" aria-hidden="true"></i>
+                    <small>&ensp;+509 4612-3390</small>
+                </div>
+                <div class="iteminfo">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <small>&ensp;VENTZDEV</small>
+                </div>
+                <div class="iteminfo">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <small>VENTZDEV</small>
+                </div>
+            </div>
+        </div>
+        <div class="infos">
+            <h4>Compétences</h4>
+            <div class="info">
+                <div class="iteminfo">
+                    <i class="fa fa-code" aria-hidden="true"></i>
+                    <small>Html5 <span id="slash">/</span>Htmx <span id="slash">/</span> Css</small>
+                </div>
+
+                <div class="iteminfo">
+                    <i class="fa fa-code" aria-hidden="true"></i>
+                    <small>Java <span id="slash">/</span> Javascript <span id="slash">/</span> Jquerry</small>
+                </div>
+                <div class="iteminfo">
+                    <i class="fa fa-code" aria-hidden="true"></i>
+                    <small>PHP </small>
+                </div>
+
+                <div class="iteminfo">
+                    <i class="fa fa-code" aria-hidden="true"></i>
+                    <small>Python <span id="slash">/</span> Django</small>
+                </div>
+                <div class="iteminfo">
+                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                    <small>Reseaux Informatique</small>
+                </div>
+                <div class="iteminfo">
+                    <i class="fa fa-database" aria-hidden="true"></i>
+                    <small>SQLite <span id="slash">/</span> Mysql <span id="slash">/</span>Postgrey</small>
+                </div>
+
+                <div class="iteminfo">
+                    <i class="fa fa-file-excel-o" aria-hidden="true"></i>
+                    <small>Exel <span id="slash">/</span> Word <span id="slash">/</span>Postgrey</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="infos">
+            <h4>Languages</h4>
+            <div class="info">
+                <div class="iteminfo">
+                    <i class="fa fa-language" aria-hidden="true"></i>
+                    <small>Creole</small>
+                </div>
+                <div class="iteminfo">
+                    <i class="fa fa-language" aria-hidden="true"></i>
+                    <small>Anglais</small>
+                </div>
+
+                <div class="iteminfo">
+                    <i class="fa fa-language" aria-hidden="true"></i>
+                    <small>Francais</small>
+                </div> 
+            </div>
+        </div>
+
+    </div>
+    <h1 id="personnel">Résumé professionnel</h1>
+    <div>
+        <p>Informaticien compétent et passionné avec 3 années d'expérience dans le domaine. Expert en développement de site web, gestion de projets et résolution de problèmes complexes. Compétences techniques étendues dans les langages de programmation, les bases de données et les technologies émergentes. Soucieux du détail, orienté résultats et capable de travailler efficacement en équipe ou de manière autonome. Forte capacité à communiquer des concepts techniques de manière claire et concise.</p>
+
+        <ul style="margin-left: 10px;">
+            <li ><p>Conception et mise en œuvre de solutions techniques pour répondre aux besoins des clients.</p></li>
+            <li><p>Gestion de projets informatiques, y compris la planification, la coordination des ressources et le respect des délais.</p></li>
+            <li><p>Résolution des problèmes techniques complexes et suivi des performances des applications.</p></li>
+            <li><p>Participation à la conception et au développement d'une application web basée sur vente en ligne.</p></li>
+        </ul>
+    </div>
+
+</div>
+{%endblock%}

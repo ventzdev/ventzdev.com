@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+{%block titre%}Projets{%endblock%}
+{%block caption%}MES PROJECTS{%endblock%}
+{%block contenu%}
+{% load static %}
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    .row {
+        position: relative;
+    }
+</style>
+<div class="container" style="margin-top:50px;">
+    <div class="row">
+        {%for project in project%}
+        <div class="col-md-3 itemsProjectMediaplay">
+            <div class="card-sl">
+                <div class="card-image">
+                    <video class="video-mounseover" muted>
+                        <source class="mediaSource" src="{{project.video.url}}" type="video/mp4">
+                    </video>
+                    
+                </div>
+
+                <a class="card-action" href="#"><i class="fa fa-heart"></i></a>
+                <div class="card-heading">
+                  {{project.titre}}
+                </div>
+                <div class="card-text">
+                   {{project.desc}}
+                </div>
+                <div class="card-text flexItemsShow">
+                    ${{project.prix_site}}
+                </div>
+
+                <a href="{{project.lien_site}}" target="_blank" class="card-button"> visite le site</a>
+            </div>
+        </div>
+        {%endfor%}
+
+    </div>
+
+</div>
+{%endblock%}

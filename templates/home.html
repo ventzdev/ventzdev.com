@@ -1,0 +1,395 @@
+{% extends 'base.html'%}
+{% block titre%}Welcome{%endblock%}
+{%block caption%}BIENVENUE SUR VENTZDEV{%endblock%}
+{%block contenu%}
+{% load static %}
+
+<div id="about-me">
+    {%for about in about%}
+    <div class="left">
+        <img src="{{about.img.url}}" alt="">
+    </div>
+    <div class="right">
+
+        <h2>À propos de moi</h2>
+        <p class="about">{{about.apropos}}</p>
+        <div class="footer_profile">
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+    {%endfor%}
+</div>
+
+<!-- kisa mwen fe  -->
+<section class="section services-section" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-title">
+                    <h2 class="whatIdo">Ce Que Je Fais <a href="{%url 'project'%}"><i
+                                class="fa fa-long-arrow-right arow "></i></a></h2>
+                    <p>Je conçois et développe des services pour des clients de toutes tailles, spécialisés dans la
+                        création de sites Web élégants et modernes</p>
+                </div>
+            </div>
+        </div>
+        <style>
+            #services .feature-content p {
+                margin-bottom: 10px;
+                overflow: hidden;
+                -webkit-line-clamp: 6;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                text-align: justify;
+            }
+
+            .lirePlus {
+                border: 1px solid var(--bg);
+                padding: 5px 10px;
+                border-radius: 10px;
+                font-size: 15px;
+                color: var(--bg);
+                box-sizing: border-box;
+                background-color: transparent;
+            }
+
+            .lirePlus i {
+                margin-left: 10px;
+                font-size: 22px;
+                transform: translateY(3px);
+
+            }
+
+            .feature-box-1:hover .lirePlus {
+                border: 1px solid rgba(255, 255, 255, 0.89);
+            }
+
+            .feature-box-1:hover .lirePlus,
+            .feature-box-1:hover .lirePlus i {
+                color: #fff;
+            }
+        </style>
+        <div class="row all items">
+            <!-- feaure box -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="feature-box-1">
+                    <div class="icon">
+                        <i class="fa fa-desktop"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h5>Unique design</h5>
+                        <p>Le design  est véritablement unique et original. J'ai pris le soin de créer un design qui se démarque de la concurrence et offre une expérience visuelle mémorable. Chaque élément visuel, des illustrations aux icônes, en passant par les typographies et les espaces négatifs.</p>
+                          <a href="{%url 'liste'%}" class="lirePlus"> Lire Plus<i class="fa fa-long-arrow-right  "></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- / -->
+            <!-- feaure box -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="feature-box-1">
+                    <div class="icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h5>Mise en page différente</h5>
+                        <p> La mise en page des site web personnel se distingue par son originalité et son design unique. J'ai consacré du temps à créer une expérience visuelle captivante et immersive pour les utilisateurs.</p>
+                        <a href="{%url 'liste'%}" class="lirePlus"> Lire Plus<i class="fa fa-long-arrow-right  "></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- / -->
+            <!-- feaure box -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="feature-box-1">
+                    <div class="icon">
+                        <i class="fa fa-comment"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h5>Simplifiez-vous la vie</h5>
+                        <p> Mes projets web est conçu pour simplifier votre vie. Grâce à l'interface intuitive et conviviale, vous pouvez facilement naviguer, trouver les informations dont vous avez besoin et effectuer les actions souhaitées en quelques clics.</p>
+                          <a href="{%url 'liste'%}" class="lirePlus"> Lire Plus<i class="fa fa-long-arrow-right  "></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- / -->
+            <!-- feaure box -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="feature-box-1">
+                    <div class="icon">
+                        <i class="fa fa-image"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h5>Réactivité</h5>
+                        <p>"La réactivité de mes projets web est d'une importance capitale. Chaque aspect est soigneusement optimisé pour garantir une expérience fluide et adaptative, peu importe le dispositif utilisé. Que ce soit sur un ordinateur de bureau, une tablette ou un smartphone.</p>
+                          <a href="{%url 'liste'%}" class="lirePlus"> Lire Plus<i class="fa fa-long-arrow-right  "></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- / -->
+            <!-- feaure box -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="feature-box-1">
+                    <div class="icon">
+                        <i class="fa fa-th"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h5>Tester la perfection</h5>
+                        <p>Je mets un point d'honneur à tester la perfection de mon projet web personnel. Chaque aspect est minutieusement examiné et validé pour garantir une qualité exceptionnelle. Je consacre du temps à des tests rigoureux, en utilisant des méthodologies éprouvées, pour m'assurer du bon fonctionnement de chaque fonctionnalité.</p>
+                          <a href="{%url 'liste'%}" class="lirePlus"> Lire Plus<i class="fa fa-long-arrow-right  "></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- / -->
+            <!-- feaure box -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="feature-box-1">
+                    <div class="icon">
+                        <i class="fa fa-cog"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h5>Options avancées</h5>
+                        <p>Mes projets web  offre une gamme d'options avancées pour répondre à vos besoins spécifiques. Chaque fonctionnalité est conçue avec soin et offre une solution puissante pour optimiser votre expérience en ligne.</p>
+                          <a href="{%url 'liste'%}" class="lirePlus"> Lire Plus<i class="fa fa-long-arrow-right  "></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- / -->
+        </div>
+    </div>
+</section>
+
+<!-- prix de travail -->
+<section id="pricing" class="pricing-content section-padding">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Plans Tarifaires</h2>
+            <p>Choisissez votre plans et commencez a développez votre entreprise</p>
+        </div>
+        <div class="row text-center">
+            {%for tarif in tarif%}
+            <div class="col-lg-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s"
+                data-wow-offset="0"
+                style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
+
+                <div class="pricing_design">
+                    <div class="single-pricing">
+                        <div class="price-head">
+                            <h2>{{tarif.categorie}}</h2>
+                            <h1>${{tarif.prix}}</h1>
+                        </div>
+                        <ul>
+                            <li>{{tarif.detay1}}</li>
+                            <li> {{tarif.detay2}}</li>
+                            <li> {{tarif.detay3}}</li>
+                        </ul>
+                        <a href="{%url 'contact'%}" class="price_btn">Contactez-moi</a>
+                    </div>
+                </div>
+
+            </div>
+            {%endfor%}
+            <!--- END COL -->
+
+        </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+</section>
+<!-- poukisa pouw chwazi nou  -->
+<div class="container" id="choose">
+    <div class="text-center mb-2-8 mb-lg-6 header">
+        <h2 class="display-18 display-md-16 display-lg-14 font-weight-700">Pourquoi choisir <strong
+                class="text-primary font-weight-700">Moi</strong></h2>
+        <span>Les sources fiable pour me choisir</span>
+    </div>
+    <div class="row align-items-center">
+        <div class="col-sm-6 col-lg-4 mb-2-9 mb-sm-0">
+            <div class="pr-md-3">
+                <div class="text-center text-sm-right mb-2-9">
+                    <div class="mb-4 ">
+                        <i class="fa fa-calendar rounded-circle icons" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="sub-info">Pourquoi me choisir pour votre projet web.</h4>
+                    <p class="display-30 mb-0">Parce que je suis passionné par la création de sites web uniques et
+                        attrayants. Avec mon expertise technique et ma créativité, je peux vous aider à réaliser votre
+                        projet web personnel de manière professionnelle et efficace.</p>
+                </div>
+                <div class="text-center text-sm-right">
+                    <div class="mb-4 ">
+                        <i class="fa fa-money rounded-circle icons" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="sub-info">Vous cherchez quelqu'un pour donner vie à votre projet web personnel </h4>
+                    <p class="display-30 mb-0"> Ne cherchez pas plus loin ! En tant que développeur web indépendant, je
+                        suis déterminé à créer des sites web qui se démarquent et captivent votre public cible.Je
+                        combine ma passion pour le design et le développement avec une approche centrée sur le client.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 d-none d-lg-block">
+            <div class="why-choose-center-image">
+                <img src="{%static 'images/choose.png'%}" alt="..." class="round">
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+            <div class="pl-md-3">
+                <div class="text-center text-sm-left mb-2-9">
+                    <div class="mb-4 ">
+                        <i class="fa fa-calendar rounded-circle icons" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="sub-info">Pourquoi me choisir comme partenaire </h4>
+                    <p class="display-30 mb-0"> Parce que je suis animé par la volonté de créer des expériences web
+                        uniques et mémorables. je mets mes compétences et ma créativité à votre service pour réaliser
+                        votre vision en ligne. Je suis passionné par la qualité de mon travail et je m'engage à fournir
+                        des solutions web personnalisées.</p>
+                </div>
+
+                <div class="text-center text-sm-left">
+                    <div class="mb-4 ">
+                        <i class="fa fa-calendar rounded-circle icons" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="sub-info">Ce qui fait la différence</h4>
+                    <p class="display-30 mb-0">Ce qui fait la différence dans mon approche pour votre projet web
+                        personnel, c'est mon engagement à fournir une expérience utilisateur exceptionnelle. Je crois
+                        fermement que la convivialité et la facilité d'utilisation sont des éléments essentiels pour le
+                        succès d'un site web</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fin  -->
+
+<!-- mes associes -->
+
+<div class="container" id="colabo">
+    <h2 class="text-center colab">En collaboration avec</h2>
+    <div class="allItems">
+        {%for asosye in asosye %}
+        <div class="asosyeItem">
+            <div class="items-associe">
+                <img class="rounded-circle" src="{{asosye.img.url}}" alt="">
+            </div>
+            <h4 class="text-center">{{asosye.name}}</h4>
+            <h5 class="text-center"><small>{{asosye.fonsyon}}</small></h5>
+            <div class="footer_profile">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        {%endfor%}
+
+    </div>
+
+</div>
+
+<!-- contact  -->
+<div class="container" id="formTop">
+    <div class="contact__wrapper shadow-lg mt-n9" style="box-shadow: 0 0 30px rgba(23, 33, 44, 0.247);">
+        <div class="row no-gutters" id="forms">
+            <div class="col-lg-5 contact-info__wrapper gradient-brand-color p-5 order-lg-2">
+                <h3 class="color--white mb-5">Contact-Me</h3>
+
+                <ul class="contact-info__list list-style--none position-relative z-index-101">
+                    <li class="mb-4 pl-4">
+                        <span class="position"><i class="fa fa-envelope"></i> eventzmarceille190@gmail.com</span>
+                    </li>
+                    <li class="mb-4 pl-4">
+                        <span class="position"><i class="fa fa-phone"></i> (509) 4612-3390</span>
+                    </li>
+                    <li class="mb-4 pl-4">
+                        <span class="position-"><i class="fa fa-map-marker"></i>
+                            Cap-Haitien,Haiti
+                            <div class="mt-3">
+                                <a href="https://www.google.com/maps" target="_blank"
+                                    class="text-link link--right-icon text-white">Get directions <i
+                                        class="link__icon fa fa-long-arrow-right"></i></a>
+                            </div>
+                    </li>
+                </ul>
+
+                <figure class="figure position-absolute m-0 opacity-06 z-index-100" style="bottom:0; right: 10px">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="444px"
+                        height="626px">
+                        <defs>
+                            <linearGradient id="PSgrad_1" x1="0%" x2="81.915%" y1="57.358%" y2="0%">
+                                <stop offset="0%" stop-color="rgb(255,255,255)" stop-opacity="1"></stop>
+                                <stop offset="100%" stop-color="rgb(0,54,207)" stop-opacity="0"></stop>
+                            </linearGradient>
+
+                        </defs>
+                        <path fill-rule="evenodd" opacity="0.302" fill="rgb(72, 155, 248)"
+                            d="M816.210,-41.714 L968.999,111.158 L-197.210,1277.998 L-349.998,1125.127 L816.210,-41.714 Z">
+                        </path>
+                        <path fill="url(#PSgrad_1)"
+                            d="M816.210,-41.714 L968.999,111.158 L-197.210,1277.998 L-349.998,1125.127 L816.210,-41.714 Z">
+                        </path>
+                    </svg>
+                </figure>
+            </div>
+
+            <div class="col-lg-7 contact-form__wrapper  order-lg-1">
+                <form  class="contact-form form-validate" novalidate="novalidate"  id="my-form" action="https://formspree.io/f/mzblpwlo" method="POST">
+                    <div class="row">
+                        <div class="col-sm-6 mb-3">
+                            <div class="form-group">
+                                <label class="required-field" for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName"
+                                    placeholder="Marceille" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mb-3">
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName"
+                                    placeholder="eventz" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mb-3">
+                            <div class="form-group">
+                                <label class="required-field" for="email">Email</label>
+                                <input type="text" class="form-control" id="email" name="email"
+                                    placeholder="eventzmarceille190@gmail.com" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mb-3">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone"
+                                    placeholder="(509) 4612-3390" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 mb-3">
+                            <div class="form-group">
+                                <label class="required-field" for="message">How can we help?</label>
+                                <textarea class="form-control" id="message" name="message" rows="4"
+                                    placeholder="Hi there, I would like to....." required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 mb-3">
+                            <button type="submit" name="submit" class="btn btn-primary">Send</button>
+                        </div>
+
+                    </div>
+                </form>
+                <p id="my-form-status"></p>
+            </div>
+            <!-- End Contact Form Wrapper -->
+
+        </div>
+    </div>
+</div>
+{%endblock%}
